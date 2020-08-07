@@ -40,3 +40,4 @@
 6. git reset --hard HEAD^ -> 回退上个版本信息
 7. git remote -v -> 查看本地仓库关联的远程仓库
 8. git clone 仓库地址 -> 克隆仓库
+
