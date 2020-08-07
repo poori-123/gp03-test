@@ -18,9 +18,17 @@
 1. git init -> 创建版本库
 2. git add 文件名 ->工作区提交到暂存区
 3. git commit -m '注释' -> 暂存区提交到本地仓库
-4. git remote add origin 仓库地址 -> 把本地仓库与远程仓库关联
-5. git push -u origin master -> 本地的库推送到服务器
-6. git pull -> 从服务器拉去更新
+
+## 连接服务器
+1. git remote add origin 仓库地址 -> 把本地仓库与远程仓库关联
+2. git push (-u origin master) -> 本地的库推送到服务器(首次操作时需设置默认地址)(若服务器和本地都被修改过，需先将服务器的拉取到本地更新，再推送到服务器)(推送前记得提交本地！！！)
+3. git pull -> 从服务器拉取更新
+
+## 设置分支
+1. git branch -> 查看所有分支，当前分支前有*号
+2. git branch 分支名 -> 创建分支
+3. git checkout 分支名 -> 切换到目标分支(切换分支前记得提交数据)
+
 
 ## 辅助操作
 1. git status -> 查看工作区状态
