@@ -19,7 +19,7 @@
 3. git commit -m '注释' -> 暂存区提交到本地仓库
 4. git remote add origin 仓库地址 -> 把本地仓库与远程仓库关联
 5. git push -u origin master -> 本地的库推送到服务器
-
+6. git pull -> 从服务器拉去更新
 
 ## 辅助操作
 1. git status -> 查看工作区状态
