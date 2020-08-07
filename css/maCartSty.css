@@ -1,0 +1,200 @@
+.header{
+    width: 1000px;
+    height: 100px;
+    margin: 0 auto;
+    background: #eee;
+}
+.goodslist{
+    width: 1000px;
+    margin: 0 auto;
+}
+.goodslist .allgoods{
+    overflow: hidden;
+}
+.goodslist .allgoods h3{
+    float: left;
+    font-size: 16px;
+    color: #e2231a;
+    line-height: 36px;
+    border-bottom: 1px solid #e2231a;
+    margin-bottom: -1px;
+    position: absolute;
+    z-index: 10;
+}
+.goodslist .allgoods div{
+    float: right;
+    font-size: 16px;
+    line-height: 36px;
+    color: #666666;
+}
+.goodslist .allgoods div select{
+    width: 175px;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid #cecbce;
+}
+.list-tit{
+    height: 42px;
+    background: #f3f3f3;
+    border: 1px solid #e9e9e9;
+}
+.list-tit span{
+    float: left;
+    line-height: 42px;
+    font-size: 12px ;
+    color: #666666;
+}
+.list-tit .selectall{
+    padding-left: 10px;
+    float: left;
+    overflow: hidden;
+}
+.list-tit .selectall input{
+    float: left;
+    margin: 0;
+    margin-top: 14px;
+}
+.list-tit .selectall span{
+    margin-left: 7px;
+}
+.list-tit .tit{
+    margin: 0 450px 0 76px;
+}
+.list-tit .num{
+    margin: 0 105px 0 67px;
+}
+.list-tit .del{
+    margin-left: 40px;
+}
+.goodslist ul{
+    overflow: hidden;
+}
+.goodslist ul li{
+    border: 1px solid #f1f1f1;
+    padding: 15px 0 0 10px;
+    height: 118px;
+}
+.goodslist ul li:hover{
+    border: 1px solid #999;
+}
+.goodslist ul li input{
+    float: left;
+    margin-top: 5px;
+    overflow: hidden;
+}
+.goodslist ul li img{
+    float: left;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #eeeeee;
+}
+.goodslist ul li h3{
+    float: left;
+    margin-left: 10px;
+    line-height: 20px;
+    font-size: 12px;
+    color: #333;
+    width: 250px;
+}
+.goodslist ul li h4{
+    float: left;
+    margin-left: 220px;
+    line-height: 20px;
+    width: 60px;
+    font-size: 12px;
+    color: #333;
+
+}
+.goodslist ul li .num{
+    width: 78px;
+    height: 20px;
+    border: 1px solid #ccc;
+    float: left;
+    margin-left: 18px;
+}
+.goodslist ul li .num span{
+    width: 16px;
+    line-height: 20px;
+    float: left;
+    text-align: center;
+}
+.goodslist ul li .num .minus{
+    border-right: 1px solid #ccc;
+    cursor: pointer;
+}
+.goodslist ul li .num .add{
+    border-left: 1px solid #ccc;
+    cursor: pointer;
+}
+.goodslist ul li .num .num-num{
+    width: 44px;
+}
+.goodslist ul li h5{
+    float: left;
+    line-height: 20px;
+    font-size: 12px;
+    color: #333;
+    margin-left: 65px;
+    width: 100px;
+}
+.goodslist ul li h6{
+    float: left;
+    line-height: 20px;
+    font-size: 12px;
+    color: #666;
+    cursor: pointer;
+    margin-left: -25px;
+}
+.goodslist ul li h6:hover{
+    color: #e2231a;
+}
+.empty{
+    width: 1000px;
+    line-height: 200px;
+    font-size: 16px;
+    margin: 0 auto;
+    color: #666;
+    text-align: center;
+    display: none;
+}
+.empty a{
+    color: #e2231a;
+}
+.listbot{
+    overflow: hidden;
+    color: #666;
+}
+.listbot input{
+    float: left;
+    margin-top: 14px;
+}
+.listbot>span{
+    float: left;
+    line-height: 40px;
+    cursor: pointer;
+}
+.listbot .sel-all{
+    margin-left: 5px;
+}
+.listbot .del-all{
+    margin-left: 20px;
+}
+.listbot h5{
+    float: left;
+    line-height: 40px;
+    margin-left: 650px;
+}
+.listbot h5 i{
+    font-size: 24px;
+    font-weight: bold;
+    color: #e2231a;
+    line-height: 40px;
+}
+
+
+
+
+
+
+

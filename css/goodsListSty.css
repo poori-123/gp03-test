@@ -1,0 +1,88 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    background: #eee;
+}
+.header{
+    width: 1200px;
+    height: 80px;
+    background: #fff;
+    margin: 0 auto;
+}
+.header .buyCart{
+    width: 100px;
+    line-height: 36px;
+    padding: 0 20px;
+    color: #e23a3a;
+    border: 1px solid #666;
+    background: url(../img/cart.png) no-repeat right 20px center;
+    background-color: #fff;
+    float: right;
+    margin: 22px 50px 0 0;
+    cursor: pointer;
+}
+.header .buyCart:hover{
+    border-color: #e23a3a;
+}
+.content{
+    width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+    background: #fff;
+    margin-top: 50px;
+}
+.content .goods{
+    width: 240px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    margin-bottom: 20px;
+    float: left;
+}
+.content .goods:hover{
+    border: 1px solid #ccc;
+}
+.content .goods img{
+    display: block;
+    width: 220px;
+    height: 220px;
+}
+.content .goods h3{
+    color: #e4393c;
+    font-size: 20px;
+    line-height: 40px;
+}
+.content .goods h4{
+    color: #666666;
+    font-size: 12px;
+    line-height: 20px;
+    width: 220px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.content .goods h5{
+    color: #999999;
+    font-size: 12px;
+    line-height: 16px;
+}
+.content .goods p{
+    float: left;
+    color: #e4393c;
+    width: 68px;
+    line-height: 25px;
+    padding-left: 35px;
+    font-size: 12px;
+    background: url(../img/cart.png) no-repeat 5px center;
+    border: 1px solid #dddddd;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.content .goods p:hover{
+    border-color: #e23a3a;
+}
+
+
+
+
+

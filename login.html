@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        html.body{
+            width: 100%;
+            height: 100%;
+        }
+    .header{
+        width: 100%;
+        height: 80px;
+        background: #eee;
+        position: relative;
+    }
+    .header .login{
+        float: right;
+        padding-right: 20px;
+        line-height: 80px;
+        color: #666;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    .header .login:hover{
+        color: red;
+    }
+    .content{
+        width: 100%;
+        height: 800px;
+        background: lightskyblue;
+    }
+    .info-login{
+        width: 400px;
+        height: 200px;
+        padding: 50px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -150px;
+        margin-left: -250px;
+        z-index: 999;
+        background: #fff;
+        display: none;
+    }
+    .info-login p{
+        margin-bottom: 20px;
+        line-height: 30px;
+        font-size: 18px;
+    }
+    .info-login p label{
+        float: left;
+        width: 80px;
+        text-align-last: justify;
+    }
+    .info-login p input{
+        width: 200px;
+        height: 30px;
+    }
+    .info-login h5{
+        margin-bottom: 20px;
+        line-height: 30px;
+        font-size: 18px;
+    }
+    .info-login .btn{
+        display: block;
+        width: 100px;
+        line-height: 30px;
+        text-align: center;
+        font-size: 18px;
+    }
+    .info-login .close{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        color: red;
+        cursor: pointer;
+    }
+    .mask{
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.3);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        display: none;
+    }
+    .information{
+        float: right;
+        line-height: 40px;
+        padding-right: 20px;
+        color: #999;
+    }
+
+    
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="login">登录</div>
+        <!-- <div class="information"></div> -->
+        
+    </div>
+    <div class="content"></div>
+    <div class="info-login">
+        <p><label for="">用户名</label>：<input type="text" class="username"></p>
+        <p><label for="">密码</label>：<input type="text" class="psd"></p>
+        <h5><label for="">记住密码</label><input type="checkbox" class="check"></h5>
+        <input type="reset" class="btn" value="登录">
+        <span class="close">X</span>
+    </div>
+    <div class="mask"></div>
+
+
+    <script src="./jquery-3.5.1/jquery-3.5.1.js"></script>
+    <script src="./js/packFunction.js"></script>
+    <script>
+        $('.login').click(function(){
+            $('.info-login').css('display','block');
+            $('.mask').css('display','block'); 
+            if(getCookie('username')){
+                $('.username').val(getCookie('username'));
+                $('.psd').val(getCookie('password'));
+                $('.check').prop('checked','true');
+            }
+        })
+
+        $('.close').click(function(){
+            $('.info-login').css('display','none');
+            $('.mask').css('display','none'); 
+        })
+
+        $('.btn').click(function(){
+            if(!$('.username').val() || !$('.psd').val()){
+                alert('用户名或密码不能为空，请从新输入！');
+                return false;
+            }
+            if($('.check').prop('checked')){
+                setCookie({
+                key:'username',
+                val:$('.username').val(),
+                days:7
+                });
+                setCookie({
+                    key:'password',
+                    val:$('.psd').val(),
+                    days:7
+                });
+            }else{
+                removeCookie('username');
+                removeCookie('password');
+            };
+            var d = new Date();
+            var dateStr = (d.getMonth()+1) + '月' + d.getDate() + '日' + d.getHours() + '时' + d.getMinutes() + '分';
+            alert('登陆成功!');
+            $('.info-login').css('display','none');
+            $('.mask').css('display','none'); 
+            if(getCookie($('.username').val() + 'preTime')){
+                var domStr = '欢迎登录：' + $('.username').val() + ';<br/>你上次登录时间为：' + getCookie($('.username').val() + 'preTime');
+            }else{
+                var domStr = '欢迎登录：' + $('.username').val() + ';<br/>你上次登录时间为：近七日没有你的登录记录！';
+            }
+            $newD = $('<div class="information">' + domStr + '</div>');
+            $newD.replaceAll($('.login'));
+            setCookie({
+                key:$('.username').val() + 'preTime',
+                val:dateStr,
+                days:7
+            }); 
+        });
+    
+    </script>
+</body>
+</html>
