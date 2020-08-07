@@ -12,6 +12,11 @@
 - 修改内容
 - 在线修改
 
+## 首次安装基础配置
+1. git config --global user.name "你的git名称" -> 设置用户名
+2. git config --global user.email "你的git验证邮箱" -> 设置邮箱
+3. git config --list -> 查看配置信息
+
 ## 主要操作
 1. git init -> 创建版本库
 2. git add 文件名 ->工作区提交到暂存区
