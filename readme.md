@@ -23,6 +23,8 @@
 1. git remote add origin 仓库地址 -> 把本地仓库与远程仓库关联
 2. git push (-u origin master) -> 本地的库推送到服务器(首次操作时需设置默认地址)(若服务器和本地都被修改过，需先将服务器的拉取到本地更新，再推送到服务器)(推送前记得提交保存本地！！！)
 3. git pull -> 从服务器拉取更新
+4. git remote rm origin -> 删除地址
+5. git remote add orgin 新地址 -> 设置新地址
 
 ## 设置分支
 1. git branch -> 查看所有分支，当前分支前有*号
