@@ -48,4 +48,6 @@
 4. 在远程仓库github上添加title和key，和本地的一致。title可以自己取一个容易区分的名字，key为id_rsa.pub中的内容（全部复制，可用cat id_rsa.pub命令打开）
 5. 获取ssh地址，设置连接到新地址
 
-
+## 设置git忽略文件(不会上传的文件)
+1. 创建文件：.gitignore
+2. 设置忽略文件列表
