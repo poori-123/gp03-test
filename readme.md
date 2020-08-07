@@ -41,3 +41,11 @@
 7. git remote -v -> 查看本地仓库关联的远程仓库
 8. git clone 仓库地址 -> 克隆仓库
 
+## 设置SSH秘钥
+1. cd ~/.ssh -> 检查是否已存在秘钥，若存在则直接进入到目录
+2. ssh-keygen -t rsa -C '邮箱地址' -> 设置新秘钥
+3. 登陆github帐户点击头像，然后 Settings -> 左栏点击 SSH and GPG keys -> 点击 New SSH key
+4. 在远程仓库github上添加title和key，和本地的一致。title可以自己取一个容易区分的名字，key为id_rsa.pub中的内容（全部复制，可用cat id_rsa.pub命令打开）
+5. 获取ssh地址，设置连接到新地址
+
+
